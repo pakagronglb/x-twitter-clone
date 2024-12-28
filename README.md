@@ -100,16 +100,14 @@ screens: {
 }
 ```
 
-## 🔧 Installation
+## 🔧 Installation & Environment Setup
 
 1. Clone the repository:
-
 ```bash
 git clone https://github.com/pakagronglb/x-twitter-clone.git
 ```
 
 2. Install dependencies:
-
 ```bash
 cd x-twitter-clone
 npm install
@@ -117,15 +115,43 @@ npm install
 
 3. Set up environment variables:
 
+Create a `.env.local` file with the following variables:
 ```bash
-cp .env.example .env.local
+# ImageKit Configuration
+NEXT_PUBLIC_IMAGEKIT_URL_ENDPOINT="your_imagekit_url_endpoint"
+NEXT_PUBLIC_IMAGEKIT_PUBLIC_KEY="your_imagekit_public_key"
+IMAGEKIT_PRIVATE_KEY="your_imagekit_private_key"
+
+# Other Configuration
+# Add any other environment variables your app needs
 ```
 
-4. Run the development server:
+4. Configure Vercel Environment Variables:
+   - Go to your Vercel project
+   - Navigate to Settings > Environment Variables
+   - Add the following variables:
+     - `NEXT_PUBLIC_IMAGEKIT_URL_ENDPOINT`
+     - `NEXT_PUBLIC_IMAGEKIT_PUBLIC_KEY`
+     - `IMAGEKIT_PRIVATE_KEY`
 
+5. Run the development server:
 ```bash
 npm run dev
 ```
+
+## 🚀 Deployment
+
+### Deploying to Vercel
+
+1. Push your code to GitHub
+2. Import your repository in Vercel
+3. Ensure all environment variables are set in Vercel project settings
+4. Deploy!
+
+If you encounter deployment issues:
+- Verify all environment variables are set correctly
+- Check build logs for specific errors
+- Ensure ImageKit configuration is complete
 
 ## 🤝 Contributing
 
