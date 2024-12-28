@@ -14,6 +14,9 @@ const dm_sans = DM_Sans({
 export const metadata: Metadata = {
   title: 'X Clone',
   description: 'X clone social media application -- but Y',
+  icons: {
+    icon: '/favicon.ico',
+  },
 }
 
 export default function RootLayout({
